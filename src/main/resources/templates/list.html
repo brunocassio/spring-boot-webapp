@@ -24,60 +24,10 @@
             </tr>
             </thead>
             <tbody>
-            <tr>
-                <td>ipsum</td>
-                <td>dolor</td>
-                <td>sit</td>
-            </tr>
-            <tr>
-                <td>consectetur</td>
-                <td>adipiscing</td>
-                <td>elit</td>
-            </tr>
-            <tr>
-                <td>nec</td>
-                <td>odio</td>
-                <td>Praesent</td>
-            </tr>
-            <tr>
-                <td>Sed</td>
-                <td>cursus</td>
-                <td>ante</td>
-            </tr>
-            <tr>
-                <td>diam</td>
-                <td>Sed</td>
-                <td>nisi</td>
-            </tr>
-            <tr>
-                <td>quis</td>
-                <td>sem</td>
-                <td>at</td>
-            </tr>
-            <tr>
-                <td>elementum</td>
-                <td>imperdiet</td>
-                <td>Duis</td>
-            </tr>
-            <tr>
-                <td>ipsum</td>
-                <td>Praesent</td>
-                <td>mauris</td>
-            </tr>
-            <tr>
-                <td>nec</td>
-                <td>tellus</td>
-                <td>sed</td>
-            </tr>
-            <tr>
-                <td>semper</td>
-                <td>porta</td>
-                <td>Mauris</td>
-            </tr>
-            <tr>
-                <td>Vestibulum</td>
-                <td>lacinia</td>
-                <td>arcu</td>
+            <tr th:each="contact : ${contacts}">
+                <td th:text="${contact.name}"></td>
+                <td th:text="${contact.address}"></td>
+                <td th:text="${contact.phone}"></td>
             </tr>
             </tbody>
         </table>
