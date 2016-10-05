@@ -23,4 +23,9 @@ public class ContactServiceImpl implements ContactService {
     public Iterable<Contact> listAllContacts() {
         return contactRepository.findAll();
     }
+
+    @Override
+    public Contact saveContact(Contact contact) {
+        return contactRepository.save(contact);
+    }
 }

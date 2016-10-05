@@ -1,5 +1,6 @@
 package com.springbootwebapp.web;
 
+import com.springbootwebapp.domain.Contact;
 import com.springbootwebapp.services.ContactService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -24,5 +25,17 @@ public class ContactController {
     public String list(Model model){
         model.addAttribute("contacts", contactService.listAllContacts());
         return "list";
+    }
+
+    @RequestMapping(value = "contact", method = RequestMethod.POST)
+    public String save(Contact contact){
+        contactService.saveContact(contact);
+        return "";
+    }
+
+    @RequestMapping("/include")
+    public String newContact(Model model){
+        model.addAttribute("contact", new Contact());
+        return "include";
     }
 }

@@ -8,4 +8,6 @@ import com.springbootwebapp.domain.Contact;
 public interface ContactService {
 
     Iterable<Contact> listAllContacts();
+
+    Contact saveContact(Contact contact);
 }
