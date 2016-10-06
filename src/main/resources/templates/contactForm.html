@@ -13,7 +13,7 @@
     </div>
 </nav>
 <div class="container">
-    <h1 class="page-header">List of Contacts</h1>
+    <h1 class="page-header">Create/Edit Contact</h1>
     <form th:object="${contact}" th:action="@{/contact}" method="post">
         <input type="hidden" th:field="*{id}"/>
         <div class="form-group row">
@@ -36,6 +36,7 @@
         </div>
         <div class="form-group row">
             <div class="offset-sm-2 col-sm-10">
+                <button type="submit" class="btn btn-warning"><span><a th:href="@{/contacts}">Back</a></span></button>
                 <button type="submit" class="btn btn-primary">Save</button>
             </div>
         </div>

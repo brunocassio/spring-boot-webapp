@@ -30,12 +30,14 @@ public class ContactController {
     @RequestMapping(value = "contact", method = RequestMethod.POST)
     public String save(Contact contact){
         contactService.saveContact(contact);
-        return "";
+        return "redirect:/contacts";
     }
 
-    @RequestMapping("/include")
+    @RequestMapping("/contactForm")
     public String newContact(Model model){
         model.addAttribute("contact", new Contact());
-        return "include";
+        return "contactForm";
     }
+
+
 }

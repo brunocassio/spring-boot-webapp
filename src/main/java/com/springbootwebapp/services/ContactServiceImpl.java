@@ -28,4 +28,5 @@ public class ContactServiceImpl implements ContactService {
     public Contact saveContact(Contact contact) {
         return contactRepository.save(contact);
     }
+
 }
