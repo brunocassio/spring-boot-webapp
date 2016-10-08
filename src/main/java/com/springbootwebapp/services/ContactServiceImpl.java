@@ -29,4 +29,9 @@ public class ContactServiceImpl implements ContactService {
         return contactRepository.save(contact);
     }
 
+    @Override
+    public Contact getContactById(Integer id) {
+        return contactRepository.findOne(id);
+    }
+
 }

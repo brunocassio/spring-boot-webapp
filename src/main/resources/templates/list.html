@@ -16,7 +16,7 @@
     <h1 class="page-header">List of Contacts</h1>
     <div class="form-group row">
         <div class="offset-sm-2 col-sm-10">
-            <button type="submit" class="btn btn-primary"><span><a th:href="@{/contactForm}">New Contact</a></span></button>
+            <button type="submit" class="btn btn-default"><span><a th:href="@{/contactForm}">New Contact</a></span></button>
         </div>
     </div>
     <div class="table-responsive">
@@ -28,6 +28,7 @@
                 <th>Phone</th>
                 <th></th>
                 <th></th>
+                <th></th>
             </tr>
             </thead>
             <tbody>
@@ -35,11 +36,10 @@
                 <td th:text="${contact.name}"></td>
                 <td th:text="${contact.address}"></td>
                 <td th:text="${contact.phone}"></td>
-                <td><button type="submit"  class="btn btn-primary glyphicon glyphicon-edit" data-toggle="tooltip"
-                            data-placement="left" title="Edit"></button>
+                <td><button type="submit"  class="btn btn-primary glyphicon glyphicon-edit">
+                    <a th:href="${'/contact/edit/' + contact.id}">Edit</a></button>
                 </td>
-                <td><button type="submit"  class="btn btn-danger glyphicon glyphicon-trash" data-toggle="tooltip"
-                            data-placement="left" title="Delete"></button>
+                <td><button type="submit" class="btn btn-danger glyphicon glyphicon-trash"></button>
                 </td>
             </tr>
             </tbody>
