@@ -12,4 +12,6 @@ public interface ContactService {
     Contact saveContact(Contact contact);
 
     Contact getContactById(Integer id);
+
+    void deleteContact(Integer id);
 }

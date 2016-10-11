@@ -46,4 +46,10 @@ public class ContactController {
         return "contactForm";
     }
 
+    @RequestMapping("contact/delete/{id}")
+    public String delete(@PathVariable Integer id){
+        contactService.deleteContact(id);
+        return "redirect:/contacts";
+    }
+
 }
